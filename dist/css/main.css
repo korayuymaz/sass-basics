@@ -1,5 +1,16 @@
 body {
   background-color: #333;
   color: #fff;
-  font-weight: 700;
+}
+
+.main {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+.main__paragraph {
+  font-weight: 300;
+}
+.main__paragraph:hover {
+  color: #444;
 }/*# sourceMappingURL=main.css.map */
