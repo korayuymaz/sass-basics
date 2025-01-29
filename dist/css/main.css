@@ -10,13 +10,22 @@ body {
 }
 
 .main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 20px;
   width: 80%;
-  margin: 0 auto;
-  padding: 20px;
+  margin: 20% auto;
 }
 .main__paragraph {
   font-weight: 400;
 }
 .main__paragraph:hover {
   color: #444;
+}
+@media (max-width: 768px) {
+  .main {
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=main.css.map */

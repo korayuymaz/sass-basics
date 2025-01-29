@@ -5,15 +5,36 @@
   @return map-get($font-weight, $weight-name);
 }
 
+@mixin flexCenter($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+  gap: 20px;
+}
+
+@mixin theme($light-theme: true) {
+  @if $light-theme {
+    background-color: lighten($primary-color, 100%);
+    color: darken($text-color, 100%);
+  }
+}
+
+@mixin mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+
 body {
   background-color: $primary-color;
   color: $text-color;
 }
 
 .main {
+  @include flexCenter(row);
   width: 80%;
-  margin: 0 auto;
-  padding: 20px;
+  margin: 20% auto;
 
   &__paragraph {
     font-weight: weight(regular);
@@ -22,4 +43,12 @@ body {
       color: $secondary-color;
     }
   }
+
+  @include mobile {
+    flex-direction: column;
+  }
+}
+
+.light-theme {
+  @include theme($light-theme: false);
 }
