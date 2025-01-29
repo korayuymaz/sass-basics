@@ -10,5 +10,18 @@ $font-weight: (
 body {
   background-color: $primary-color;
   color: $text-color;
-  font-weight: map-get($font-weight, $key: bold);
+}
+
+.main {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+
+  &__paragraph {
+    font-weight: map-get($font-weight, $key: light);
+
+    &:hover {
+      color: $secondary-color;
+    }
+  }
 }
