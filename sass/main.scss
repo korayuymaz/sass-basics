@@ -36,11 +36,19 @@ body {
   width: 80%;
   margin: 20% auto;
 
-  &__paragraph {
+  &__paragraph1 {
     font-weight: weight(regular);
 
     &:hover {
       color: $secondary-color;
+    }
+  }
+
+  &__paragraph2 {
+    @extend .main__paragraph1;
+
+    &:hover {
+      color: pink;
     }
   }
 
